@@ -1,0 +1,14 @@
+taxonomy: topic
+_id: clothing-shoes
+name: Clothing & Shoes
+shortname: Clothing & Shoes
+parent: Shopping
+keywords:
+  - clothing
+  - shoes
+  - boots
+images:
+  - https://everyday-cc.github.io/shopping/assets/images/topics/clothing-shoes.jpg
+services:
+  deals: https://everyday-cc.github.io/shopping/api/deals/clothing-shoes/
+  freestuffs: https://everyday-cc.github.io/shopping/api/freestuffs/clothing-shoes/

@@ -1,0 +1,17 @@
+taxonomy: topic
+_id: beauty
+name: Beauty
+shortname: Beauty
+parent: Shopping
+keywords:
+  - beauty
+  - skin care
+  - hair care
+  - fragrance
+hashtags: 
+  - "#beauty"
+images:
+  - https://everyday-cc.github.io/shopping/assets/images/topics/beauty.jpg
+services:
+  deals: https://everyday-cc.github.io/shopping/api/deals/beauty/
+  freestuffs: https://everyday-cc.github.io/shopping/api/freestuffs/beauty/

@@ -1,0 +1,13 @@
+taxonomy: topic
+_id: electronics-computers
+name: Electronics & Computers
+shortname: Electronics & Computers
+parent: Shopping
+keywords:
+  - computer
+hashtags:
+images:
+  - https://everyday-cc.github.io/shopping/assets/images/topics/electronics-computers.jpg
+services:
+  deals: https://everyday-cc.github.io/shopping/api/deals/electronics-computers/
+  freestuffs: https://everyday-cc.github.io/shopping/api/freestuffs/electronics-computers/

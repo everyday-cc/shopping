@@ -1,0 +1,20 @@
+taxonomy: topic
+_id: sports-outdoors
+name: Sports & Outdoors
+shortname: Sports & Outdoors
+parent: Shopping
+keywords:
+  - cycling
+  - sports
+  - fitness
+  - yoga
+  - camping
+  - climbing
+  - boating
+  - hunting
+hashtags:
+images:
+  - https://everyday-cc.github.io/shopping/assets/images/topics/sports-outdoors.jpg
+services:
+  deals: https://everyday-cc.github.io/shopping/api/deals/sports-outdoors/
+  freestuffs: https://everyday-cc.github.io/shopping/api/freestuffs/sports-outdoors/

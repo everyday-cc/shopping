@@ -1,0 +1,15 @@
+taxonomy: topic
+_id: shopping
+name: Shopping
+keywords:
+  - azure
+hashtags:
+  - "#azure"
+images:
+  - https://everyday-cc.github.io/shopping/assets/images/topics/shopping.jpg
+  - https://everyday-cc.github.io/shopping/assets/images/topics/shopping-2.jpg
+  - https://everyday-cc.github.io/shopping/assets/images/topics/shopping-3.jpg
+services:
+  deals: https://everyday-cc.github.io/shopping/api/deals/
+  freestuffs: https://everyday-cc.github.io/shopping/api/freestuffs/
+  newsletters: https://everyday-cc.github.io/shopping/api/newsletters/

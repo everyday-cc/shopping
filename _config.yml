@@ -1,0 +1,163 @@
+#----------------------------------------------------------------------------------
+# Site Settings
+#----------------------------------------------------------------------------------
+
+title: Deals Every Day
+url: https://everyday-cc.github.io
+baseurl: "/shopping"
+webUrl: https://everyday.cc/shopping
+locale: "en-us"
+charset: utf-8
+repository: everyday-cc/shopping
+
+
+#----------------------------------------------------------------------------------
+# Post Settings
+#----------------------------------------------------------------------------------
+
+# The permalink of posts
+# For multilingual site, /:path/ is the only global permalink setting that works.
+# Other permalink settings cannot prepend the post locale to the URL.
+permalink: /:year/:month/:day/:title/
+
+# Default settings of posts
+default_post_settings: &default_post_settings
+  layout: post
+  permalink: /api/:categories/:year/:month/:day/:title/index.json
+  deleted: false
+  related: true
+
+pagination:
+  page_size: 20
+
+
+#----------------------------------------------------------------------------------
+# Deal Settings
+#----------------------------------------------------------------------------------
+
+# Default settings of deals
+default_deal_settings: &default_deal_settings
+  layout: post
+  category: deal
+  permalink: /api/deals/:path/index.json
+  deleted: false
+
+
+#----------------------------------------------------------------------------------
+# FreeStuff Settings
+#----------------------------------------------------------------------------------
+
+# Default settings of events
+default_freestuff_settings: &default_freestuff_settings
+  layout: post
+  category: freestuff
+  permalink: /api/freestuffs/:path/index.json
+  deleted: false
+
+
+#----------------------------------------------------------------------------------
+# Newsletter Settings
+#----------------------------------------------------------------------------------
+
+# Default settings of newsletter issues
+default_newsletter_settings: &default_newsletter_settings
+  layout: post
+  category: newsletter
+  permalink: /api/newsletters/:path/index.json
+  deleted: false
+
+
+#----------------------------------------------------------------------------------
+# System Settings
+# DO NOT CHANGE if you do not know what you are doing
+#----------------------------------------------------------------------------------
+
+collections:
+  terms:
+    output: true
+  sponsorships:
+    output: true
+  posts:
+    output: true
+  deals:
+    output: true
+  freestuffs:
+    output: true
+  newsletters:
+    output: true
+
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      <<: *default_post_settings
+  # _deals
+  - scope:
+      path: ""
+      type: deals
+    values:
+      <<: *default_deal_settings
+  - scope:
+      path: "_deals/collections"
+    values:
+      layout: collection
+      category: deal
+      permalink: /api/deals/collections/:title/index.json
+      type: collection
+      support_paging: false
+  # _freestuffs
+  - scope:
+      path: ""
+      type: freestuffs
+    values:
+      <<: *default_freestuff_settings
+  - scope:
+      path: "_freestuffs/collections"
+    values:
+      layout: collection
+      category: freestuff
+      permalink: /api/freestuffs/collections/:title/index.json
+      type: collection
+      support_paging: false
+  # _newsletters
+  - scope:
+      path: ""
+      type: newsletters
+    values:
+      <<: *default_newsletter_settings
+  # apis
+  - scope:
+      path: "api/*/*"
+    values:
+      layout: collection
+      permalink: /:path/index.json
+      support_paging: true
+
+
+# Use the following Jekyll plug-ins
+plugins:
+  - jekyll-redirect-from
+  - jekyll-relative-links # Convert relative links to md files to their rendered equivalents
+  - jemoji # Enable Emoji
+  - jekyll-remote-theme
+
+relative_links:
+  enabled: true
+  collections: true
+
+include:
+  - .htaccess
+
+# Exclude these files from your production _site
+exclude:
+  - CNAME
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - .cache
+  - .sass-cache
+
+remote_theme: everyday-cc/build
+incremental: true
